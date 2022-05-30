@@ -10,3 +10,4 @@ import {
 ```
 const store = createStore(reduces, composeEnhancers(applyMiddleware(thunk)));
 ```
+# [page view](http://xqcao.github.io/react_redux)
