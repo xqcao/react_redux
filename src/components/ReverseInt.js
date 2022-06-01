@@ -30,7 +30,7 @@ const pycode = `class Solution:
 const ReverseInt = () => {
   return (
     <div>
-      <h2>Reverse Integer</h2>
+      <h2># 7. Reverse Integer</h2>
       <p>
         Given a signed 32-bit integer x, return x with its digits reversed. If
         reversing x causes the value to go outside the signed 32-bit integer
