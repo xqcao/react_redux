@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { CodeBlock, dracula } from "react-code-blocks";
 import code1 from "./images/leetcode1.png";
 const bb = `
@@ -14,7 +14,6 @@ const pycode = `class Solution:
       if x<0:
         f=-1
       x=[y for y in str(x*f)]
-      x = 
       i=0
       while i<len(x)//2:
         temp=x[i]
@@ -28,6 +27,7 @@ const pycode = `class Solution:
       return 0
 `;
 const ReverseInt = () => {
+  const [triggleIt, setTriggleIt] = useState(false);
   return (
     <div>
       <h2># 7. Reverse Integer</h2>
@@ -38,10 +38,20 @@ const ReverseInt = () => {
         allow you to store 64-bit integers (signed or unsigned).
       </p>
       <p>{bb}</p>
+      <label htmlFor="nmline">show Line Numbers?</label>
+      <input
+        type="checkbox"
+        name="nmline"
+        value={triggleIt}
+        onChange={() => setTriggleIt(!triggleIt)}
+      />
+      <p style={{ color: triggleIt ? "green" : "red" }}>
+        show flag: {" " + triggleIt}
+      </p>
       <CodeBlock
         text={pycode}
         language={"python"}
-        showLineNumbers={true}
+        showLineNumbers={triggleIt}
         startingLineNumber={1}
         theme={dracula}
         wrapLines={true}
