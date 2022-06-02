@@ -4,6 +4,7 @@ import { CodeBlock, dracula } from "react-code-blocks";
 
 const CodeBlockComponent = () => {
   const [langVal, setLangVal] = useState("jxs");
+  const [lineFlag, setLineFlag] = useState(false);
   return (
     <div>
       <h2>Code Block Component</h2>
@@ -21,11 +22,15 @@ const CodeBlockComponent = () => {
       </select>
       {/* <p>{langVal}</p>
       <p>{obj[langVal]}</p> */}
+      <br />
+      <br />
+      <label htmlFor="onelg">Show line Numbers</label>
+      <input type="checkbox" onChange={() => setLineFlag(!lineFlag)} />
       {undefined !== obj[langVal] && (
         <CodeBlock
           text={obj[langVal]}
           language={langVal}
-          showLineNumbers={true}
+          showLineNumbers={lineFlag}
           startingLineNumber={1}
           theme={dracula}
           wrapLines={true}
