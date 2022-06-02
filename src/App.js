@@ -5,6 +5,7 @@ import About from "./components/About";
 import Count from "./components/Count";
 import Todo from "./components/Todo";
 import ReverseInt from "./components/ReverseInt";
+import CodeTest1 from "./components/CodeTest1";
 
 const routes = [
   { name: "Welcome", url: "/", component: Welcome },
@@ -13,6 +14,7 @@ const routes = [
   { name: "Count Page", url: "/count", component: Count },
   { name: "TODO Page", url: "/todo", component: Todo },
   { name: "Reverse Int", url: "reverseint", component: ReverseInt },
+  { name: "Code Test1 Page", url: "/codetest1", component: CodeTest1 },
 ];
 
 function App() {
