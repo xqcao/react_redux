@@ -6,6 +6,7 @@ import Count from "./components/Count";
 import Todo from "./components/Todo";
 import ReverseInt from "./components/ReverseInt";
 import CodeTest1 from "./components/CodeTest1";
+import CodeBlockComponent from "./components/CodeBlockComponent";
 
 const routes = [
   { name: "Welcome", url: "/", component: Welcome },
@@ -15,6 +16,7 @@ const routes = [
   { name: "TODO Page", url: "/todo", component: Todo },
   { name: "Reverse Int", url: "reverseint", component: ReverseInt },
   { name: "Code Test1 Page", url: "/codetest1", component: CodeTest1 },
+  { name: "code Block page", url: "/language", component: CodeBlockComponent },
 ];
 
 function App() {
