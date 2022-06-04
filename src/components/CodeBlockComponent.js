@@ -9,11 +9,12 @@ const CodeBlockComponent = () => {
     <div>
       <h2>Code Block Component</h2>
       <select
+        style={{ fontSize: ".9rem", padding: " 2px 5px" }}
         onChange={(e) => {
           setLangVal(e.target.value);
-          console.log(e);
         }}
       >
+        <option value="">--Please choose an option--</option>
         {Object.keys(obj).map((el, idx) => (
           <option key={el} value={el}>
             {el}
