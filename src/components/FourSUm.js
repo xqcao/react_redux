@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CodeBlock, dracula } from "react-code-blocks";
+import { CopyBlock, dracula } from "react-code-blocks";
 import sum4 from "./images/4sum.png";
 const pycode = `class Solution:
     def fourSum(self, nums, target: int):
@@ -47,7 +47,7 @@ const FourSUm = () => {
         name="onelg"
         onChange={() => setLineFlag(!lineFlag)}
       />
-      <CodeBlock
+      <CopyBlock
         text={pycode}
         language={"python"}
         showLineNumbers={lineFlag}
